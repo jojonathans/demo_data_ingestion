@@ -27,3 +27,11 @@ cur.close
 conn.close
 
 
+# gsutil cp ~/digitalskola/syarif/demo_data_ingestion/syarif_products.csv gs://digitalskola-de-batch7/syarif/products/<nama>_products.csv
+# kirim csv dari server ke google cloud
+
+
+# bq mkdef --source_format=CSV --autodetect=true gs://digitalskola-de-batch7/syarif/<nama>_products.csv > products_def
+# bikin table bedasarkan csv yang sudah kita upload ke google cloud storage
+# tapi BQ tidak akan simpan datanya, jadi csv seperti view 
+# otomatis tau tipe datanya apa
