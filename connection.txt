@@ -1,0 +1,12 @@
+username = doadmin
+password = AVNS_TDrSDUoeoSNF5rVVSLx
+host = digitalskola7-do-user-7592846-0.b.db.ondigitalocean.com
+port = 25061
+database = deadpool
+
+
+pakai ini ya? username = doadmin
+password = AVNS_9rkEwRUjxaQfL-T7mET
+host = digitalskola-do-user-7592846-0.b.db.ondigitalocean.com
+port = 25060
+database = defaultdb
