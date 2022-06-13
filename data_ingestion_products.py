@@ -1,3 +1,4 @@
+#Local
 # import psycopg2
 
 # conn    = psycopg2.connect(host='digitalskola7-do-user-7592846-0.b.db.ondigitalocean.com', dbname='deadpool', user='doadmin', password='AVNS_TDrSDUoeoSNF5rVVSLx', port='25061')
@@ -8,6 +9,9 @@
 # csv_file.close()
 # curr.close()
 # conn.close()
+
+
+#run at server
 import psycopg2
 import os
 
@@ -19,12 +23,12 @@ SQL_DB = os.environ.get('OLTP_DATABASE')
 
 conn = psycopg2.connect(host=SQL_HOST, dbname=SQL_DB, user=SQL_USER, password=SQL_PASS, port=SQL_PORT)
 cur = conn.cursor()
-sql = 'COPY (select * from products) TO STDOUT WITH CSV HEADER'
-csv_file = open('D:\Jonathan\Digital Skola\Week 5\jonathan_products.csv' , 'w')
+sql = 'COPY (select * from products) TO STDOUT WITH CSV HEADER' #query postgre untuk langsung export ke csv
+csv_file = open('jonathan_products.csv' , 'w') #w = write, dia otomatis create kok
 cur.copy_expert(sql,csv_file)
 csv_file.close()
-cur.close
-conn.close
+cur.close()
+conn.close()
 
 
 # gsutil cp ~/digitalskola/syarif/demo_data_ingestion/syarif_products.csv gs://digitalskola-de-batch7/syarif/products/<nama>_products.csv
