@@ -7,8 +7,8 @@
 # sql     = 'COPY (select * from products) TO STDOUT WITH CSV HEADER'
 # curr.copy_expert(sql , csv_file)
 # csv_file.close()
-# curr.close()
-# conn.close()
+# curr.close
+# conn.close
 
 
 #run at server
@@ -27,8 +27,8 @@ sql = 'COPY (select * from products) TO STDOUT WITH CSV HEADER' #query postgre u
 csv_file = open('jonathan_products.csv' , 'w') #w = write, dia otomatis create kok
 cur.copy_expert(sql,csv_file)
 csv_file.close()
-cur.close()
-conn.close()
+cur.close
+conn.close
 
 
 # gsutil cp ~/digitalskola/syarif/demo_data_ingestion/syarif_products.csv gs://digitalskola-de-batch7/syarif/products/<nama>_products.csv
